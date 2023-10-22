@@ -43,6 +43,7 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                     <th>Tanggal Pengaduan</th>
                                     <th>Nomor Telepon</th>
                                     <th>Gambar</th>
+                                    <th>Status</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -57,6 +58,7 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                     <th>Tanggal Pengaduan</th>
                                     <th>Nomor Telepon</th>
                                     <th>Gambar</th>
+                                    <th>Status</th>
                                     <th></th>
                                 </tr>
                             </tfoot>
@@ -75,13 +77,14 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                         <td>
                                             <img width="60px" height="60px" src="../../img/pengaduan/<?php echo $rows['gambar'] ?>" alt="">
                                         </td>
+                                        <td><?php echo $rows['status']==1?'Pengaduan telah ditinjau':'' ?></td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
                                             <a href="../models/hapusPengaduan.php?id=<?= $rows['id']; ?>">
                                                 <button type="button" class="btn btn-danger">
                                                     <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
-                                            <a href="../templates/notifikasi.php?id=<?= $rows['id'] ?>">
+                                            <a href="../templates/balasan.php?id=<?= $rows['id']; ?>">
                                                 <button type="button" class="btn btn-success ml-2">
                                                     <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i class="fa-solid fa-envelope"></i></div>
                                                 </button>

@@ -46,7 +46,15 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                 <td><?= $rows['judul_pengaduan'] ?></td>
                                 <td><?= date('d M Y H:i', strtotime($rows['tanggal_pengaduan'])) ?></td>
                                 <td><?= $rows['detail_pengaduan'] ?></td>
-                                <td></td>
+                                <td>
+                                    <?php
+                                        if($rows['status']=='1'){?>
+                                            <div class="badge bg-success"><i class="bi bi-check-square-fill p-2"></i>Pengaduan telah ditinjau</div>
+                                       <?php }?>
+                                       <?php if($rows['status']=='2'){?>
+                                        <div class="badge bg-danger"><i class="bi bi-exclamation p-2"></i>Pengaduan telah ditinjau</div>
+                                    <?php }?>
+                                </td>
                             </tr>
                             <?php $i++ ?>
                         <?php } ?>

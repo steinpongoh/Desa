@@ -1,9 +1,8 @@
 <?php
 include '../functions/dbconnect.php';
-$id =$_GET['id'];
-$query =mysqli_query($dbconnect, "select * from pengaduan where id='$id'");
-$user =mysqli_fetch_array($query);
-
+$id=$_POST['id'];
+$email=$_POST['email'];
+$pesan=$_POST['pesan'];
 
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
@@ -19,22 +18,22 @@ $mail -> Username   ='ulllrauulll@gmail.com';
 $mail -> Password   ='sqqelzaobjcnxdfm';
 $mail -> From       ='ulllrauulll@gmail.com';
 $mail -> FromName   ='Rauulll ULLL';
-$mail -> addAddress($user['email']);
+$mail -> addAddress($email);
 $mail -> Subject    ='Balasan Pengaduan Admin Desa Tondangow';
-$mail -> Body       ='<p>Terima Kasih telah menggunakan Website ini. Kami telah menerima Pengaduan anda, dan segera akan kami proses sesuai dengan prosedur yang ada dan akan ditindak lanjuti oleh pemerintah setempat. <p> 
-Judul Pengaduan:'. $user['judul_pengaduan']. '<p>'.
-'Detail:'. $user['detail_pengaduan']. '<p>'.
-'Tanggal Pengaduan:'. $user['tanggal_pengaduan']. '<p>'.
-'Kami akan segera melaporkannya ke pihak berwenang dan kami akan berusaha secepat mungkin akan mengatasinya.<br>
-Terima kasih atas laporannya.</p>';
+$mail -> Body       = $pesan;
 
 if($mail->send()){
-    echo "
+	echo	"
         	<script>
         		alert ('Email Berhasil Terkirim');
         		document.location.href = '../controllers/dataPengaduan.php';
         	 </script>
-        ";
+        	";
+			$query="UPDATE pengaduan SET status='1'
+			WHERE id='$id'";
+			
+			mysqli_query($dbconnect,$query);
+			return mysqli_affected_rows($dbconnect);
 }else{
     echo "Email gagal terkirim";
 };
