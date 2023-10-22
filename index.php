@@ -17,7 +17,80 @@ $jumlahWanita = count(query('SELECT * FROM penduduk WHERE jenis_kelamin = "Wanit
 <!-- Home -->
 
 <!-- Highlight Berita Start -->
+<section id="highlight" class="highlight">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-10 text-center mb-3" data-aos="fade-left">
+      <h2>Berita</h2>
+    </div>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="col-md-5 mx-auto">
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start h-100" alt="...">
+                </div>
+                <div class="col-md-8 ">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Card title 1</h5>
+                    <p class="card-text fs-6">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text fs-6"><small class="text-body-secondary">Tanggal Berita</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-5 mx-auto">
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start h-100" alt="...">
+                </div>
+                <div class="col-md-8 ">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Card title 2</h5>
+                    <p class="card-text fs-6">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text fs-6"><small class="text-body-secondary">Tanggal Berita</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-5 mx-auto">
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start h-100" alt="...">
+                </div>
+                <div class="col-md-8 ">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Card title 3</h5>
+                    <p class="card-text fs-6">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text fs-6"><small class="text-body-secondary">Tanggal Berita</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
+  </div>
+</section>
 
 
 <!-- Highlight Berita End-->
@@ -28,7 +101,7 @@ $jumlahWanita = count(query('SELECT * FROM penduduk WHERE jenis_kelamin = "Wanit
   <div class="row justify-content-center">
     <div class="col-md-8 text-center" data-aos="fade-down-left">
       <h2>Statistik Kependudukan</h2>
-      <div class="col-lg-6 d-flex justify-content-between align-items-center w-100 h-100">
+      <div class="col-md-6 mt-4 d-flex justify-content-between align-items-center w-100">
         <span><i class="bi bi-people"></i><br />
           <h2><?php echo $jumlahPenduduk; ?></h2>
           <h5>Jumlah Penduduk</h5>
