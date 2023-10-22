@@ -56,46 +56,54 @@ $queryuser = query('SELECT * FROM user');
                                         <td><?php echo $rows['username'] ?></td>
                                         <td><?php echo $rows['password'] ?></td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
-                                            
-                                                <button class="button btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $rows['id'] ?>">
-                                                    <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i class="fa-solid fa-trash"></i></div>
-                                                </button>
-                                            
+
+                                            <a href="#" data-toggle="modal" data-target="#hapusModal" data-id="<?= $rows['id'] ?>">
+                                                <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i class="fa-solid fa-trash"></i></div>
+                                            </a>
+
+
                                             <a href="../models/ubahpassword.php?id=<?= $rows['id']; ?>">
                                                 <button type="button" class="btn btn-warning ml-2">
                                                     <div class="sb-nav-link-icon mr-0 ml-1 mb-0 mt-0"><i class="fa-solid fa-pen"></i></div>
                                                 </button>
                                             </a>
+                                            <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="hapusModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="hapusModalLabel">Konfirmasi Hapus</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Apakah Anda yakin ingin menghapus item ini?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                                            <a href="../models/hapusUser.php?id=<?= $rows['id']; ?>">
+                                                                <button type="button" class="btn btn-danger" id="hapusButton">Hapus</button>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </td>
                                     </tr>
                                     <?php $i++ ?>
-                                    <!-- Modal Hapus Data -->
-                                    <div class="modal" id="exampleModal<?= $rows['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Hapus Data</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Yakin mau hapus User ini?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a href="../models/hapusUser.php?id=<?= $rows['id'] ?>">Ya</a>
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 <?php } ?>
                             </tbody>
                         </table>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
         </main>
     </div>
 </div>
+
+
 
 <?php include '../templates/footer.php'; ?>
