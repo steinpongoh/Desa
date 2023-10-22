@@ -4,7 +4,9 @@ include 'function.php';
 $jumlahPenduduk = count(query('SELECT * FROM penduduk'));
 $jumlahKepalaKeluarga = count(query('SELECT * FROM keluarga'));
 $jumlahPria = count(query('SELECT * FROM penduduk WHERE jenis_kelamin = "Pria"'));
-$jumlahWanita = count(query('SELECT * FROM penduduk WHERE jenis_kelamin = "Wanita"'))
+$jumlahWanita = count(query('SELECT * FROM penduduk WHERE jenis_kelamin = "Wanita"'));
+
+$query = query('SELECT * FROM berita');
 ?>
 
 <!-- Home -->
@@ -24,60 +26,26 @@ $jumlahWanita = count(query('SELECT * FROM penduduk WHERE jenis_kelamin = "Wanit
     </div>
     <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="col-md-6 mx-auto p-5 slider-card">
-            <div class="card mb-3 border-2 border-black border-opacity-50 shadow">
-              <div class="row g-0">
-                <div class="col-md-4 p-2">
-                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start-4 h-100" alt="...">
-                </div>
-                <div class="col-md-8 ">
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold">Card title 1</h5>
-                    <p class="card-text fs-6">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text fs-6"><small class="text-body-secondary">Tanggal Berita</small></p>
+        <?php foreach ($query as $berita) { ?>
+          <div class="carousel-item active">
+            <div class="col-md-6 mx-auto p-5 slider-card">
+              <div class="card mb-3 border-2 border-black border-opacity-50 shadow">
+                <div class="row g-0">
+                  <div class="col-md-4 p-2">
+                    <img src="img/berita/<?= $berita['gambar'] ?>" class="img-fluid object-fit-cover rounded-start-4 h-100" alt="...">
+                  </div>
+                  <div class="col-md-8 ">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold text-truncate"><?= $berita['judul_berita'] ?></h5>
+                      <p class="card-text fs-6 text-truncate"><?= $berita['detail_berita'] ?></p>
+                      <p class="card-text fs-6"><small class="text-body-secondary"><?= $berita['tanggal_berita'] ?></small></p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="carousel-item active">
-          <div class="col-md-6 mx-auto p-5">
-            <div class="card mb-3 border-2 border-black border-opacity-50 shadow">
-              <div class="row g-0">
-                <div class="col-md-4 p-2">
-                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start-4 h-100" alt="...">
-                </div>
-                <div class="col-md-8 ">
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold">Card title 2</h5>
-                    <p class="card-text fs-6">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text fs-6"><small class="text-body-secondary">Tanggal Berita</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item active">
-          <div class="col-md-6 mx-auto p-5">
-            <div class="card mb-3 border-2 border-black border-opacity-50 shadow">
-              <div class="row g-0">
-                <div class="col-md-4 p-2">
-                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start-4 h-100" alt="...">
-                </div>
-                <div class="col-md-8 ">
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold">Card title 3</h5>
-                    <p class="card-text fs-6">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text fs-6"><small class="text-body-secondary">Tanggal Berita</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php } ?>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bg-secondary rounded" aria-hidden="true"></span>
