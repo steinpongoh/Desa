@@ -84,7 +84,7 @@ if(isset($_GET['done'])){
                                         <td><?php echo $rows["alamat_lengkap"] ?></td>
                                         <td class="flex-row pr-2" style="display: flex;">
                                             <a href="../models/hapusPenduduk.php?id=<?= $rows['id']; ?>">
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $rows['id'] ?>">
                                                     <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
@@ -94,6 +94,23 @@ if(isset($_GET['done'])){
                                                 </button>
                                             </a>
                                         </td>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                </div>
                                     </tr>
                                     <?php $i++ ?>
                                 <?php } ?>
@@ -106,5 +123,6 @@ if(isset($_GET['done'])){
         </div>
     </main>
 </div>
+
 </div>
 <?php include '../templates/footer.php'; ?>
