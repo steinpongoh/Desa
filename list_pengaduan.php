@@ -52,7 +52,7 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                             <div class="badge bg-success"><i class="bi bi-check-square-fill p-2"></i>Pengaduan telah ditinjau</div>
                                        <?php }?>
                                        <?php if($rows['status']=='2'){?>
-                                        <div class="badge bg-danger"><i class="bi bi-exclamation p-2"></i>Pengaduan telah ditinjau</div>
+                                        <div class="badge bg-danger"><i class="bi bi-exclamation-circle-fill p-2"></i>Pengaduan tidak Valid</div>
                                     <?php }?>
                                 </td>
                             </tr>

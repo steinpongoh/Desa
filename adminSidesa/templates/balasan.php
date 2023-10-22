@@ -39,6 +39,7 @@ $pageName='Balasan';
                             <textarea name="pesan" id="deskripsi" autocomplete="off" type="text" class="form-control" placeholder="Isikan balasan ke Pengadu!" required></textarea>
                         </div>
                         <button name="submit" id="submit" type="submit" class="btn btn-primary">Submit</button>
+                        <a href="../models/tolakPengaduan.php?id=<?=$id?>" class="btn btn-danger"><i class="bi bi-exclamation"></i>Tolak Pengaduan</a>
                     </form>
                 </div>
             </div>

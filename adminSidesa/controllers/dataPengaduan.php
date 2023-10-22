@@ -77,11 +77,17 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                         <td>
                                             <img width="60px" height="60px" src="../../img/pengaduan/<?php echo $rows['gambar'] ?>" alt="">
                                         </td>
-                                        <td><?php echo $rows['status']==1?'Pengaduan telah ditinjau':'' ?></td>
+                                        <td>
+                                        <?php if($rows['status']=='1'){?>
+                                            <div class="badge bg-success">Pengaduan telah ditinjau</div>
+                                       <?php }?>
+                                       <?php if($rows['status']=='2'){?>
+                                            <div class="badge bg-danger">Pengaduan tidak Valid</div>
+                                        <?php }?></td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
                                             <a href="../models/hapusPengaduan.php?id=<?= $rows['id']; ?>">
-                                                <button type="button" class="btn btn-danger">
-                                                    <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i class="fa-solid fa-trash"></i></div>
+                                                <button type="button" class="btn btn-danger ">
+                                                    <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0 h-100"><i class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
                                             <a href="../templates/balasan.php?id=<?= $rows['id']; ?>">
@@ -95,6 +101,7 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                 <?php } ?>
                             </tbody>
                         </table>
+                        </div>
                     </div>
                 </div>
             </div>
