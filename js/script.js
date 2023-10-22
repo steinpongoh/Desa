@@ -27,3 +27,29 @@ var swiper = new Swiper(".slide-content", {
     },
   },
 });
+
+$(document).ready(function () {
+  $("#hapusModal").on("show.bs.modal", function (event) {
+    var button = $(event.relatedTarget);
+    var id = button.data("id");
+
+    $("#hapusButton").data("id", id);
+  });
+
+  $("#hapusButton").on("click", function () {
+    var id = $(this).data("id");
+
+    // Di sini, Anda dapat membuat permintaan AJAX untuk menghapus item dengan ID yang sesuai.
+    // Misalnya:
+    // $.ajax({
+    //   url: 'hapusUser.php?id=' + id,
+    //   method: 'POST',
+    //   success: function (data) {
+    //     // Tindakan setelah penghapusan selesai
+    //   }
+    // });
+
+    // Tutup modal setelah penghapusan selesai
+    $("#hapusModal").modal("hide");
+  });
+});
