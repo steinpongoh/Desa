@@ -29,6 +29,16 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
+  <!-- Tinymce -->
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  5
+
+  <script>
+    tinymce.init({
+      selector: 'textarea'
+    });
+  </script>
+
   <!-- Style CSS -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="shortcut icon" href="/sidesa/img/village.png" type="image/x-icon">
