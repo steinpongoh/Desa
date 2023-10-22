@@ -22,14 +22,14 @@ $jumlahWanita = count(query('SELECT * FROM penduduk WHERE jenis_kelamin = "Wanit
     <div class="col-md-8 col-10 text-center mb-3" data-aos="fade-left">
       <h2>Berita</h2>
     </div>
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="col-md-5 mx-auto">
-            <div class="card mb-3">
+          <div class="col-md-6 mx-auto p-5">
+            <div class="card mb-3 border-2 border-black border-opacity-50 shadow">
               <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start h-100" alt="...">
+                <div class="col-md-4 p-2">
+                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start-4 h-100" alt="...">
                 </div>
                 <div class="col-md-8 ">
                   <div class="card-body">
@@ -42,12 +42,12 @@ $jumlahWanita = count(query('SELECT * FROM penduduk WHERE jenis_kelamin = "Wanit
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="col-md-5 mx-auto">
-            <div class="card mb-3">
+        <div class="carousel-item active">
+          <div class="col-md-6 mx-auto p-5">
+            <div class="card mb-3 border-2 border-black border-opacity-50 shadow">
               <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start h-100" alt="...">
+                <div class="col-md-4 p-2">
+                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start-4 h-100" alt="...">
                 </div>
                 <div class="col-md-8 ">
                   <div class="card-body">
@@ -60,12 +60,12 @@ $jumlahWanita = count(query('SELECT * FROM penduduk WHERE jenis_kelamin = "Wanit
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="col-md-5 mx-auto">
-            <div class="card mb-3">
+        <div class="carousel-item active">
+          <div class="col-md-6 mx-auto p-5">
+            <div class="card mb-3 border-2 border-black border-opacity-50 shadow">
               <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start h-100" alt="...">
+                <div class="col-md-4 p-2">
+                  <img src="img/desa.jpg" class="img-fluid object-fit-cover rounded-start-4 h-100" alt="...">
                 </div>
                 <div class="col-md-8 ">
                   <div class="card-body">
@@ -80,11 +80,11 @@ $jumlahWanita = count(query('SELECT * FROM penduduk WHERE jenis_kelamin = "Wanit
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="carousel-control-prev-icon bg-secondary rounded" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="carousel-control-next-icon bg-secondary rounded" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
