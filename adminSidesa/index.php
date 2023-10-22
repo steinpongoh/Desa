@@ -1,6 +1,6 @@
 <?php
 include 'functions/general.php';
-include 'templates/header.php';
+include '../adminSidesa/templates/header.php';
 
 $pageName = 'Dashboard';
 

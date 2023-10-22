@@ -1,5 +1,5 @@
 <?php
-require '../functions/pengaduan.php';
+require '../functions/pengumuman.php';
 include '../templates/header.php';
 
 $pageName = 'Data Pengumuman';

@@ -1,5 +1,5 @@
 <?php
-require '../functions/pengaduan.php';
+require '../functions/user.php';
 include '../templates/header.php';
 
 $pageName = 'Data User';

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(empty($_SESSION['username'])){
-  header("location:templates/login.php");
+  header("location:../adminSidesa/templates/login.php");
 }
 
 ?>
@@ -33,7 +33,7 @@ if(empty($_SESSION['username'])){
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i><?php echo $_SESSION['username'];?></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="/adminSidesa/templates/logout.php">Logout</a>
+                    <a class="dropdown-item" href="/Desa/adminSidesa/templates/logout.php">Logout</a>
                 </div>
             </li>
         </ul>
@@ -44,7 +44,7 @@ if(empty($_SESSION['username'])){
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link" href="/sidesa/adminSidesa/index.php">
+                        <a class="nav-link" href="/Desa/adminSidesa/index.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-gauge-high"></i></div>
                             Dashboard
                         </a>
@@ -56,10 +56,10 @@ if(empty($_SESSION['username'])){
                         </a>
                         <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/sidesa/adminSidesa/controllers/dataPenduduk.php">
+                                <a class="nav-link" href="/Desa/adminSidesa/controllers/dataPenduduk.php">
                                     Data Penduduk
                                 </a>
-                                <a class="nav-link" href="/sidesa/adminSidesa/controllers/dataKeluarga.php">
+                                <a class="nav-link" href="/Desa/adminSidesa/controllers/dataKeluarga.php">
                                     Data Keluarga
                                 </a>
                             </nav>
@@ -71,31 +71,31 @@ if(empty($_SESSION['username'])){
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/sidesa/adminSidesa/controllers/dataPenjual.php">Data Penjual</a>
-                                <a class="nav-link" href="/sidesa/adminSidesa/controllers/dataProduk.php">Data Produk</a>
+                                <a class="nav-link" href="/Desa/adminSidesa/controllers/dataPenjual.php">Data Penjual</a>
+                                <a class="nav-link" href="/Desa/adminSidesa/controllers/dataProduk.php">Data Produk</a>
                             </nav>
                         </div>
-                        <a class="nav-link" href="/sidesa/adminSidesa/controllers/dataGaleri.php">
+                        <a class="nav-link" href="/Desa/adminSidesa/controllers/dataGaleri.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-photo-film"></i></div>
                             Data Galeri
                         </a>
-                        <a class="nav-link" href="/sidesa/adminSidesa/controllers/dataPengaduan.php">
+                        <a class="nav-link" href="/Desa/adminSidesa/controllers/dataPengaduan.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-flag"></i></div>
                             Data Pengaduan
                         </a>
-                        <a class="nav-link" href="/sidesa/adminSidesa/controllers/dataBerita.php">
+                        <a class="nav-link" href="/Desa/adminSidesa/controllers/dataBerita.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-newspaper"></i></div>
                             Data Berita
                         </a>
-                        <a class="nav-link" href="/sidesa/adminSidesa/controllers/dataPengumuman.php">
+                        <a class="nav-link" href="/Desa/adminSidesa/controllers/dataPengumuman.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-bullhorn"></i></div>
                             Data Pengumuman
                         </a>
-                        <a class="nav-link" href="/sidesa/adminSidesa/controllers/dataEvent.php">
+                        <a class="nav-link" href="/Desa/adminSidesa/controllers/dataEvent.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-calendar-days"></i></div>
                             Data Event
                         </a>
-                        <a class="nav-link" href="/sidesa/adminSidesa/controllers/dataUser.php">
+                        <a class="nav-link" href="/Desa/adminSidesa/controllers/dataUser.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-user fa-fw"></i></div>
                             Data User
                         </a>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link href="/sidesa/adminSidesa/styles/styles.css" rel="stylesheet" />
+    <link href="/Desa/adminSidesa/styles/styles.css" rel="stylesheet" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/sidesa/adminSidesa/assets/village.png" type="image/x-icon">
