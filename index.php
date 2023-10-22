@@ -25,7 +25,7 @@ $jumlahWanita = count(query('SELECT * FROM penduduk WHERE jenis_kelamin = "Wanit
     <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="col-md-6 mx-auto p-5">
+          <div class="col-md-6 mx-auto p-5 slider-card">
             <div class="card mb-3 border-2 border-black border-opacity-50 shadow">
               <div class="row g-0">
                 <div class="col-md-4 p-2">
