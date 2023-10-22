@@ -45,6 +45,9 @@ if (isset($_GET['id'])) {
     exit();
 }
 ?>
+                            <a href="<?= $event['link_lokasi'] ?>" class="position-absolute top-80 start-50 translate-middle" target="_blank"> 
+                                <button type="button" class="btn btn-danger"><i class="bi bi-geo-alt"></i> Lokasi</button>
+                            </a>
 
 <?php
 include 'templates/footer.php';

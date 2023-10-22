@@ -23,8 +23,16 @@ include 'templates/header.php';
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Tentang dana dipake untuk apa mungkin</td>
-                            <td>Tentang Deskripsi anggaran mungkin</td>
+                            <td>1.200.000.000 tahun 2021</td>
+                            <td>Digunakan untuk pembangunan infrastruktur 
+                                berupa jembatan yang mengarah ke kampus IPDN, 
+                                pembuatan irigasi untuk aliran air desa,
+                                pengadaan website desa,
+                                Juga pengadaan fasilitas umum berupa, 
+                                pusat pengaduan mayarak yang berbasis website,
+                                bak penampungan air bersih untuk masyarakat,
+                                
+                            </td>
                         </tr>
                     </tbody>
                 </table>
