@@ -3,7 +3,7 @@
 
     function tambahGaleri($data, $file){
         global $dbconnect;
-        $direktori="../../../sidesa/img/galeri/";
+        $direktori="../../img/galeri/";
         $caption=$data['caption'];
         $tanggal_upload=$data['tanggal_upload'];
 
@@ -18,7 +18,7 @@
         global $dbconnect;
         $id=$data['id'];
         $oldFile=$data['oldFile'];
-        $direktori="../../../sidesa/img/galeri/";
+        $direktori="../../img/galeri/";
         $caption=$data['caption'];
         $tanggal_upload=$data['tanggal_upload'];
         $checkFile=$file['namaFile']['name'];

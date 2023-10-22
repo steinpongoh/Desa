@@ -73,7 +73,7 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                         <td><?php echo date('d M Y H:i', strtotime($rows['tanggal_pengaduan'])) ?></td>
                                         <td><?php echo $rows['no_telepon'] ?></td>
                                         <td>
-                                            <img width="60px" height="60px" src="/sidesa/img/pengaduan/<?php echo $rows['gambar'] ?>" alt="">
+                                            <img width="60px" height="60px" src="../../img/pengaduan/<?php echo $rows['gambar'] ?>" alt="">
                                         </td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
                                             <a href="../models/hapusPengaduan.php?id=<?= $rows['id']; ?>">

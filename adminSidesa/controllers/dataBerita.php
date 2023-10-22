@@ -61,7 +61,7 @@ $queryBerita = query('SELECT * FROM berita');
                                         <td><?php echo date('d M Y', strtotime($rows['tanggal_berita']))?></td>
                                         <td style="color:grey;"><?php echo substr($rows['detail_berita'],0,15) ?></td>
                                         <td>
-                                            <img width="60px" height="60px" src="/sidesa/img/galeri/<?php echo $rows['gambar']?>" alt="">
+                                            <img width="60px" height="60px" src="../../img/berita/<?php echo $rows['gambar']?>" alt="">
                                         </td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
                                             <a href="../models/hapusBerita.php?id=<?= $rows['id']; ?>">

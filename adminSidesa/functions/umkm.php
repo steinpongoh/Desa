@@ -42,7 +42,7 @@ function hapusProduk($id)
 
 function tambahProduk($data, $file){
     global $dbconnect;
-    $direktori='../../../sidesa/img/umkm/';
+    $direktori='../../img/umkm/';
     $id_penjual=$data['nama_penjual'];
     $nama_produk=$data['nama_produk'];
     $harga=$data['harga'];
@@ -59,7 +59,7 @@ function ubahProduk($data,$file){
     
     $id=$data['id'];
     $oldFile=$data['oldFile'];
-    $direktori='../../../sidesa/img/umkm/';
+    $direktori='../../img/umkm/';
     $id_penjual=$data['nama_penjual'];
     $nama_produk=$data['nama_produk'];
     $harga=$data['harga'];

@@ -58,7 +58,7 @@ $queryGaleri = query('SELECT * FROM galeri');
                                         <td><?= $i ?></td>
                                         <td><?php echo $rows['caption']?></td>
                                         <td>
-                                            <img width="60px" height="60px" src="/sidesa/img/galeri/<?php echo $rows['gambar']?>" alt="">
+                                            <img width="60px" height="60px" src="../../img/galeri/<?php echo $rows['gambar']?>" alt="">
                                         </td>
                                         <td><?php echo date('d M Y H:i', strtotime($rows['tanggal_upload']))?></td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">

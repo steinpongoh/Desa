@@ -81,7 +81,7 @@ JOIN penduduk ON penjual.nama_penjual=penduduk.id');
                                         <td><?php echo $rows["nama_produk"] ?></td>
                                         <td>Rp<?php echo $rows["harga"] ?></td>
                                         <td>
-                                            <img width="60px" height="60px" src="/sidesa/img/umkm/<?php echo $rows['gambar'] ?>" alt="">
+                                            <img width="60px" height="60px" src="../../img/umkm/<?php echo $rows['gambar'] ?>" alt="">
                                         </td>
                                         <td class="text-muted"><?php echo substr($rows['deskripsi'],0,15)?>...</td>
                                         <td class="flex-row pr-2" style="display: flex;">
