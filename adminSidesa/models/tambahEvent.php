@@ -1,6 +1,6 @@
 <?php
 require '../functions/event.php';
-include '../templates/header.php';
+// include '../templates/header.php';
 
 $pageName='Tambah Event';
 if (isset($_POST['submit'])) {
