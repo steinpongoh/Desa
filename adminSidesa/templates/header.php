@@ -101,10 +101,10 @@ if (empty($_SESSION['username'])) {
                             <div class="sb-nav-link-icon"><i class="fas fa-user fa-fw"></i></div>
                             Data User
                         </a>
-                        <a class="nav-link" href="/Desa/adminSidesa/controllers/dataDanadesa.php">
+                        <!-- <a class="nav-link" href="/Desa/adminSidesa/controllers/dataDanadesa.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
                             Data Dana Desa
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </nav>

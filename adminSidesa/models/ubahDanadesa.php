@@ -3,17 +3,19 @@ require '../functions/danaDesa.php';
 include '../templates/header.php';
 
 $pageName = 'Tambah Dana Desa';
-if (isset($_POST['submit'])) {
-    if (tambahDanadesa($_POST) > 0) {
-        echo "<script>
-            alert('Data Berhasil Ditambah')
-        </script>";
-    } else {
-        echo "<script>
-            alert('Data Gagal Ditambah')
-        </script>";
-    }
-}
+$getId=$_GET['id'];
+$query=query("SELECT * FROM danadesa WHERE id='$getId'")[0];
+// if (isset($_POST['submit'])) {
+//     if (ubahDanadesa($_POST) > 0) {
+//         echo "<script>
+//             alert('Data Berhasil Ditambah')
+//         </script>";
+//     } else {
+//         echo "<script>
+//             alert('Data Gagal Ditambah')
+//         </script>";
+//     }
+// }
 ?>
 
 <div id="layoutSidenav_content">
@@ -38,7 +40,7 @@ if (isset($_POST['submit'])) {
                     <form name="form" id="form" action="#" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="informasi">Informasi</label>
-                            <input name="informasi" id="informasi" autocomplete="off" type="text" class="form-control" placeholder="Tuliskan judul berita" required>
+                            <input value="<?=$query['informasi']?>" name="informasi" id="informasi" autocomplete="off" type="text" class="form-control" placeholder="Tuliskan judul berita" required>
                         </div>
                         <div class="form-group">
                             <label for="detail">Detail</label>
