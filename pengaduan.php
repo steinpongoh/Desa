@@ -24,6 +24,8 @@ if (isset($_POST['kirim'])) {
         <h1 class="text-center">Pengaduan Masyarakat</h1>
         <p class="text-center">Pastikan NIK anda sudah terdaftar sebelum mengisi Pengaduan</p>
         <div class="container-form shadow p-5 mt-4 mb-4 rounded-2 border-top border-success border-3 bg-light">
+
+          <input name="status" type="hidden" class="form-control form-control-sm border border border-black p-2 mb-2 border-opacity-50" autocomplete="off" id="">
           <div class="mb-3">
             <label for="nik" class="form-label">NIK:</label>
             <input name="nik" type="number" class="form-control form-control-sm border border border-black p-2 mb-2 border-opacity-50" autocomplete="off" id="nik">

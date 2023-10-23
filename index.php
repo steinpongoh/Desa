@@ -26,9 +26,17 @@ $query = query('SELECT * FROM berita');
     </div>
     <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
       <div class="carousel-inner">
-        <?php foreach ($query as $berita) { ?>
-          <div class="carousel-item active">
-            <div class="col-md-6 mx-auto p-5 slider-card">
+        <?php
+        $isFirst = true;
+        foreach ($query as $berita) {
+          // Setelah item pertama, matikan kelas "active"
+          $activeClass = $isFirst ? "active" : "";
+          // Tentukan bahwa item pertama telah berlalu
+          $isFirst = false;
+        ?>
+          <a href="berita.php">
+            <div class="carousel-item <?= $activeClass ?>"">
+              <div class=" col-md-6 mx-auto p-5 slider-card">
               <div class="card mb-3 border-2 border-black border-opacity-50 shadow">
                 <div class="row g-0">
                   <div class="col-md-4 p-2">
@@ -44,18 +52,19 @@ $query = query('SELECT * FROM berita');
                 </div>
               </div>
             </div>
-          </div>
-        <?php } ?>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-secondary rounded" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-secondary rounded" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      </a>
+    <?php } ?>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-secondary rounded" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-secondary rounded" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
   </div>
 </section>
