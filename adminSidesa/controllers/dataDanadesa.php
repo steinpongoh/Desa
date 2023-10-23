@@ -23,7 +23,7 @@ $queryDanadesa = query('SELECT * FROM danadesa');
                         <i class="fas fa-table mr-1 position-relative"></i>
                         <?= $pageName ?>
                     </div>
-                    <a href="../models/tambahPengumuman.php">
+                    <a href="../models/tambahDanadesa.php">
                         <button type="button" class="btn btn-success">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-square-plus mr-2"></i>Tambah</div>
                         </button>
@@ -37,7 +37,7 @@ $queryDanadesa = query('SELECT * FROM danadesa');
                                 <tr>
                                     <th>No</th>
                                     <th>Informasi</th>
-                                    <th>Deskripsi</th>
+                                    <th>Detail</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -45,7 +45,7 @@ $queryDanadesa = query('SELECT * FROM danadesa');
                                 <<tr>
                                     <th>No</th>
                                     <th>Informasi</th>
-                                    <th>Deskripsi</th>
+                                    <th>Detail</th>
                                     <th></th>
                                     </tr>
                             </tfoot>
@@ -55,7 +55,7 @@ $queryDanadesa = query('SELECT * FROM danadesa');
                                     <tr>
                                         <td><?= $i ?></td>
                                         <td><?php echo $rows['informasi'] ?></td>
-                                        <td><?php echo $rows['deskripsi'] ?></td>
+                                        <td><?php echo $rows['detail'] ?></td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
                                             <a href="../models/hapusDanadesa.php?id=<?= $rows['id'] ?>">
                                                 <button type="button" class="btn btn-danger">
