@@ -4,7 +4,8 @@ include '../adminSidesa/templates/header.php';
 
 $pageName = 'Dashboard';
 
-function totalData($table){
+function totalData($table)
+{
     echo count(query("SELECT * FROM `$table`"));
 }
 
@@ -23,7 +24,7 @@ $pageName = 'Dashboard';
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-light text-black mb-4 shadow-sm">
                     <div class="card-body pb-0 text-center">Penduduk :</div>
-                    <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 25px;"><?php totalData('penduduk')?></div>
+                    <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 25px;"><?php totalData('penduduk') ?></div>
                     <div class="card-footer d-flex align-items-center justify-content-between bg-info">
                         <a class="small text-white stretched-link" href="controllers/dataPenduduk.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -63,7 +64,7 @@ $pageName = 'Dashboard';
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-light text-dark mb-4 shadow-sm">
                     <div class="card-body pb-0 text-center">Pengumuman:</div>
-                    <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 25px;"><?php totalData('Pengumuman')?></div>
+                    <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 25px;"><?php totalData('Pengumuman') ?></div>
                     <div class="card-footer d-flex align-items-center justify-content-between bg-info">
                         <a class="small text-light stretched-link" href="controllers/dataPengumuman.php">View Details</a>
                         <div class="small text-light"><i class="fas fa-angle-right"></i></div>
@@ -106,6 +107,16 @@ $pageName = 'Dashboard';
                     <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 25px;"><?php totalData('user') ?></div>
                     <div class="card-footer d-flex align-items-center justify-content-between bg-info">
                         <a class="small text-light stretched-link" href="controllers/dataUser.php">View Details</a>
+                        <div class="small text-light"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-light text-dark mb-4 shadow-sm">
+                    <div class="card-body pb-0 text-center">Dana Desa :</div>
+                    <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 25px;"><?php totalData('danadesa') ?></div>
+                    <div class="card-footer d-flex align-items-center justify-content-between bg-info">
+                        <a class="small text-light stretched-link" href="controllers/dataDanadesa.php">View Details</a>
                         <div class="small text-light"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
