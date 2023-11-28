@@ -7,7 +7,8 @@
   <title>SI Desa</title>
 
   <!-- Bootstrap Link -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,8 +37,8 @@
   <script>
     tinymce.init({
       selector: "textarea",
-      setup: function(editor) {
-        editor.on('change', function() {
+      setup: function (editor) {
+        editor.on('change', function () {
           editor.save();
         });
       }
@@ -52,8 +53,10 @@
 <body>
   <nav class="navbar navbar-expand-md bg-body-transparent fixed-top mynavbar">
     <div class="container">
-      <a class="navbar-brand animate__animated animate__lightSpeedInLeft" href="index.php">Desa <span>Tondangow</span></a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <a class="navbar-brand animate__animated animate__lightSpeedInLeft" href="index.php">Desa
+        <span>Tondangow</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -67,7 +70,8 @@
           <div class="navbar-nav ms-auto">
             <a class="nav-link animate__animated animate__fadeIn" href="index.php">Beranda</a>
             <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle animate__animated animate__fadeIn" href="#profil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle animate__animated animate__fadeIn" href="#profil" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 Profil Desa
               </a>
               <ul class="dropdown-menu text-center border-0">
@@ -89,7 +93,8 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle animate__animated animate__fadeIn" href="#profil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle animate__animated animate__fadeIn" href="#profil" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 Informasi Publik
               </a>
               <ul class="dropdown-menu text-center">
@@ -108,9 +113,9 @@
                 <li>
                   <a class="dropdown-item" href="galeri.php">Galeri</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a class="dropdown-item" href="danadesa.php">Dana Desa</a>
-                </li>
+                </li> -->
               </ul>
             </li>
             <a class="nav-link animate__animated animate__fadeIn" href="list_pengaduan.php">Pengaduan Masyarakat</a>
