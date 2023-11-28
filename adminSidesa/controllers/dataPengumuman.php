@@ -10,11 +10,15 @@ $queryPengumuman = query('SELECT * FROM pengumuman');
 <div id="layoutSidenav_content">
     <div class="container-fluid">
         <main>
-            <h1 class="mt-4"><?= $pageName ?></h1>
+            <h1 class="mt-4">
+                <?= $pageName ?>
+            </h1>
             <ol class="breadcrumb mb-4">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item active"><?= $pageName ?></li>
+                    <li class="breadcrumb-item active">
+                        <?= $pageName ?>
+                    </li>
                 </ol>
             </ol>
             <div class="card mb-4">
@@ -43,7 +47,7 @@ $queryPengumuman = query('SELECT * FROM pengumuman');
                                 </tr>
                             </thead>
                             <tfoot>
-                                <<tr>
+                                <tr>
                                     <th>No</th>
                                     <th>Judul Pengumuman</th>
                                     <th>Detail Pengumuman</th>
@@ -55,19 +59,30 @@ $queryPengumuman = query('SELECT * FROM pengumuman');
                                 <?php $i = 1 ?>
                                 <?php foreach ($queryPengumuman as $rows) { ?>
                                     <tr>
-                                        <td><?= $i ?></td>
-                                        <td><?php echo $rows['judul_pengumuman'] ?></td>
-                                        <td><?php echo $rows['detail_pengumuman'] ?></td>
-                                        <td><?php echo date('d M Y H:i', strtotime($rows['tanggal_pengumuman']))?></td>
-                                        <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
+                                        <td>
+                                            <?= $i ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $rows['judul_pengumuman'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $rows['detail_pengumuman'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo date('d M Y H:i', strtotime($rows['tanggal_pengumuman'])) ?>
+                                        </td>
+                                        <td class="flex-row pr-2 align-items-center justify-content-center"
+                                            style="display: flex;">
                                             <a href="../models/hapusPengumuman.php?id=<?= $rows['id'] ?>">
                                                 <button type="button" class="btn btn-danger">
-                                                    <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i class="fa-solid fa-trash"></i></div>
+                                                    <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i
+                                                            class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
                                             <a href="../models/ubahPengumuman.php?id=<?= $rows['id'] ?>">
                                                 <button type="button" class="btn btn-warning ml-2">
-                                                    <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i class="fa-solid fa-pen"></i></div>
+                                                    <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i
+                                                            class="fa-solid fa-pen"></i></div>
                                                 </button>
                                             </a>
                                         </td>
