@@ -224,6 +224,12 @@ body {
   color: var(--green);
   font-weight: 600;
 }
+
+.no-truncate {
+  overflow: visible;
+  white-space: normal;
+  text-overflow: inherit;
+}
 /* Highlight End */
 
 /* Berita start */

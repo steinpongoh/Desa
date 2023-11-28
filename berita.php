@@ -14,11 +14,19 @@ $query = query('SELECT * FROM berita');
       <?php foreach ($query as $berita) { ?>
         <div class="row g-0 bg-body-secondary position-relative shadow border-top border-success rounded-2 border-3 mt-5">
           <div class="col-md-6 mb-md-0 p-md-4">
-            <img src="img/berita/<?= $berita['gambar'] ?>" class="img-fluid mx-auto d-block w-100 animate__animated animate__zoomIn rounded-3" alt="">
+            <img src="img/berita/<?= $berita['gambar'] ?>"
+              class="img-fluid mx-auto d-block w-100 animate__animated animate__zoomIn rounded-3" alt="">
           </div>
           <div class="col-md-6 p-4 ps-md-0 animate__animated animate__fadeIn">
-            <h5 class="text-center mt-0 text-uppercase text"><?= $berita['judul_berita'] ?></h5>
-            <p class="d-block" style="max-height:250px; text-align: justify; text-indent:30px; overflow: auto;"><?php echo $berita['detail_berita'] ?></p>
+            <h5 class="text-center fw-bold mt-0 text-uppercase text">
+              <?= $berita['judul_berita'] ?>
+            </h5>
+            <p><small class="text-body-secondary">
+                <?= $berita['tanggal_berita']; ?>
+              </small></p>
+            <p class="d-block" style="max-height:250px; text-align: justify; text-indent:30px; overflow: auto;">
+              <?php echo $berita['detail_berita'] ?>
+            </p>
             <!-- <a href="detailBerita.php?id=" class="stretched-link"></a> -->
           </div>
 
