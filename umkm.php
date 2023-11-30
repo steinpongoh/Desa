@@ -28,7 +28,8 @@ JOIN penduduk ON penjual.nama_penjual=penduduk.id');
         <div class="row justify-content-center">
             <div class="col-md-8 col-10 text-center" data-aos="fade-down-left">
                 <h1>UMKM Desa</h1>
-                <p>Sistem informasi Desa Tondangow menyediakan informasi-informasi terkait UMKM yang ada di Desa Tondangow</p>
+                <p>Sistem informasi Desa Tondangow menyediakan informasi-informasi terkait UMKM yang ada di Desa
+                    Tondangow</p>
             </div>
             <div class="slide-container swiper" data-aos="fade-down-right">
                 <div class="slide-content">
@@ -42,9 +43,15 @@ JOIN penduduk ON penjual.nama_penjual=penduduk.id');
                                     </div>
                                 </div>
                                 <div class="card-content">
-                                    <h2 class="name"><?= $content['nama_produk'] ?></h2>
-                                    <p class="harga">Rp<?= $content['harga'] ?></p>
-                                    <button class="button" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $content['id_produk'] ?>">Info Selengkapnya</button>
+                                    <h2 class="name">
+                                        <?= $content['nama_produk'] ?>
+                                    </h2>
+                                    <p class="harga">Rp
+                                        <?= $content['harga'] ?>
+                                    </p>
+                                    <button class="button" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal<?= $content['id_produk'] ?>">Info
+                                        Selengkapnya</button>
                                 </div>
                             </div>
                         <?php } ?>
@@ -57,11 +64,14 @@ JOIN penduduk ON penjual.nama_penjual=penduduk.id');
         </div>
         <!-- Modal UMKM Start -->
         <?php foreach ($query as $content) { ?>
-            <div class="modal fade" id="exampleModal<?= $content['id_produk'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal<?= $content['id_produk'] ?>" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel"><?= $content['nama_produk'] ?></h1>
+                            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">
+                                <?= $content['nama_produk'] ?>
+                            </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -73,15 +83,24 @@ JOIN penduduk ON penjual.nama_penjual=penduduk.id');
                                     </div>
                                 </div>
                                 <div class="card-content-model">
-                                    <p class="deskripsi-modal"><?= $content['deskripsi'] ?></p>
-                                    <p class="alamat text-center"><?= $content['alamat_toko'] ?></p>
-                                    <p class="kontak text-center"><?= $content['no_telepon'] ?></p>
+                                    <div class="deskripsi-modal">
+                                        <?= $content['deskripsi'] ?>
+                                    </div>
+                                    <p class="alamat text-center mt-3">
+                                        <strong>Nama UMKM:</strong>
+                                        <?= $content['alamat_toko'] ?>
+                                    </p>
+                                    <p class="kontak text-center">
+                                        <strong>Kontak:</strong>
+                                        <?= $content['no_telepon'] ?>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a href="<?= $content['link_alamat_toko'] ?>">
-                                <button type="button" class="btn btn-danger"><i class="bi bi-geo-alt"></i> Lokasi</button>
+                            <a href="<?= $content['link_alamat_toko'] ?>" target="_blank">
+                                <button type="button" class="btn btn-danger"><i class="bi bi-geo-alt"></i>
+                                    Lokasi</button>
                             </a>
                         </div>
                     </div>

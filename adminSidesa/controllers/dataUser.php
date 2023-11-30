@@ -10,11 +10,15 @@ $queryuser = query('SELECT * FROM user');
 <div id="layoutSidenav_content">
     <div class="container-fluid">
         <main>
-            <h1 class="mt-4"><?= $pageName ?></h1>
+            <h1 class="mt-4">
+                <?= $pageName ?>
+            </h1>
             <ol class="breadcrumb mb-4">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item active"><?= $pageName ?></li>
+                    <li class="breadcrumb-item active">
+                        <?= $pageName ?>
+                    </li>
                 </ol>
             </ol>
             <div class="card mb-4">
@@ -52,27 +56,43 @@ $queryuser = query('SELECT * FROM user');
                                 <?php $i = 1 ?>
                                 <?php foreach ($queryuser as $rows) { ?>
                                     <tr>
-                                        <td><?= $i ?></td>
-                                        <td><?php echo $rows['username'] ?></td>
-                                        <td><?php echo $rows['password'] ?></td>
-                                        <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
+                                        <td>
+                                            <?= $i ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $rows['username'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $rows['password'] ?>
+                                        </td>
+                                        <td class="flex-row pr-2 align-items-center justify-content-center"
+                                            style="display: flex;">
 
-                                            <a href="#" data-toggle="modal" data-target="#hapusModal" data-id="<?= $rows['id'] ?>">
-                                                <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i class="fa-solid fa-trash"></i></div>
-                                            </a>
-
-
-                                            <a href="../models/ubahpassword.php?id=<?= $rows['id']; ?>">
-                                                <button type="button" class="btn btn-warning ml-2">
-                                                    <div class="sb-nav-link-icon mr-0 ml-1 mb-0 mt-0"><i class="fa-solid fa-pen"></i></div>
+                                            <a href="javascript:void(0);" data-toggle="modal"
+                                                data-target="#hapusModal<?= $rows['id'] ?>" data-id="<?= $rows['id'] ?>">
+                                                <button type="button" class="btn btn-danger m-1">
+                                                    <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i
+                                                            class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
-                                            <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="hapusModalLabel" aria-hidden="true">
+
+
+
+                                            <a href="../models/ubahPassword.php?id=<?= $rows['id']; ?>">
+                                                <button type="button" class="btn btn-warning">
+                                                    <div class="sb-nav-link-icon mr-0 ml-1 mb-0 mt-0"><i
+                                                            class="fa-solid fa-pen"></i></div>
+                                                </button>
+                                            </a>
+                                            <div class="modal fade" id="hapusModal<?= $rows['id'] ?>" tabindex="-1"
+                                                role="dialog" aria-labelledby="hapusModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title" id="hapusModalLabel">Konfirmasi Hapus</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <h5 class="modal-title" id="hapusModalLabel">Konfirmasi Hapus
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
                                                         </div>
@@ -80,9 +100,12 @@ $queryuser = query('SELECT * FROM user');
                                                             Apakah Anda yakin ingin menghapus item ini?
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                            <a href="../models/hapusUser.php?id=<?= $rows['id']; ?>">
-                                                                <button type="button" class="btn btn-danger" id="hapusButton">Hapus</button>
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Batal</button>
+                                                            <a href="../models/hapusUser.php?id=<?= $rows['id']; ?>"
+                                                                class="text-decoration-none">
+                                                                <button type="button" class="btn btn-danger"
+                                                                    id="hapusButton">Hapus</button>
                                                             </a>
                                                         </div>
                                                     </div>
