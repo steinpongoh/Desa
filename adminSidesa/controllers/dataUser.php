@@ -37,7 +37,7 @@ $queryuser = query('SELECT * FROM user');
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th>No</th>
                                     <th>Nama Lengkap</th>
                                     <th>Password</th>
@@ -45,7 +45,7 @@ $queryuser = query('SELECT * FROM user');
                                 </tr>
                             </thead>
                             <tfoot>
-                                <tr>
+                                <tr class="text-center">
                                     <th>No</th>
                                     <th>Nama Lengkap</th>
                                     <th>Password</th>
@@ -67,7 +67,6 @@ $queryuser = query('SELECT * FROM user');
                                         </td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center"
                                             style="display: flex;">
-
                                             <a href="javascript:void(0);" data-toggle="modal"
                                                 data-target="#hapusModal<?= $rows['id'] ?>" data-id="<?= $rows['id'] ?>">
                                                 <button type="button" class="btn btn-danger m-1">
@@ -75,9 +74,6 @@ $queryuser = query('SELECT * FROM user');
                                                             class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
-
-
-
                                             <a href="../models/ubahPassword.php?id=<?= $rows['id']; ?>">
                                                 <button type="button" class="btn btn-warning">
                                                     <div class="sb-nav-link-icon mr-0 ml-1 mb-0 mt-0"><i

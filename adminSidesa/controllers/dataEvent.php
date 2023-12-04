@@ -45,7 +45,7 @@ $queryPengaduan = query('SELECT * FROM `event`');
                                     <th>Lokasi</th>
                                     <th>Tanggal Acara</th>
                                     <th>Foto</th>
-                                    <th></th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -56,7 +56,7 @@ $queryPengaduan = query('SELECT * FROM `event`');
                                     <th>Lokasi</th>
                                     <th>Tanggal Acara</th>
                                     <th>Foto</th>
-                                    <th></th>
+                                    <th>Aksi</th>
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -84,18 +84,47 @@ $queryPengaduan = query('SELECT * FROM `event`');
                                         </td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center"
                                             style="display: flex;">
-                                            <a href="../models/hapusEvent.php?id=<?= $rows['id']; ?>">
-                                                <button type="button" class="btn btn-danger">
+                                            <a href="javascript:void(0);" data-toggle="modal"
+                                                data-target="#hapusModal<?= $rows['id'] ?>" data-id="<?= $rows['id'] ?>">
+                                                <button type="button" class="btn btn-danger m-1">
                                                     <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i
                                                             class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
-                                            <a href="../models/ubahEvent.php?id=<?= $rows['id'] ?>">
-                                                <button type="button" class="btn btn-warning ml-2">
-                                                    <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i
+                                            <a href="../models/ubahEvent.php?id=<?= $rows['id']; ?>">
+                                                <button type="button" class="btn btn-warning">
+                                                    <div class="sb-nav-link-icon mr-0 ml-1 mb-0 mt-0"><i
                                                             class="fa-solid fa-pen"></i></div>
                                                 </button>
                                             </a>
+                                            <div class="modal fade" id="hapusModal<?= $rows['id'] ?>" tabindex="-1"
+                                                role="dialog" aria-labelledby="hapusModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="hapusModalLabel">Konfirmasi Hapus
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Apakah Anda yakin ingin menghapus item ini?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Batal</button>
+                                                            <a href="../models/hapusEvent.php?id=<?= $rows['id']; ?>"
+                                                                class="text-decoration-none">
+                                                                <button type="button" class="btn btn-danger"
+                                                                    id="hapusButton">Hapus</button>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </td>
                                     </tr>
                                     <?php $i++ ?>

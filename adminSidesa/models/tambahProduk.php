@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
             <ol class="breadcrumb mb-4">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="../controllers/dataPenjual.php">Data Penjual</a></li>
+                    <li class="breadcrumb-item"><a href="../controllers/dataProduk.php">Data Produk</a></li>
                     <li class="breadcrumb-item active">
                         <?= $pageName ?>
                     </li>

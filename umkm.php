@@ -87,7 +87,7 @@ JOIN penduduk ON penjual.nama_penjual=penduduk.id');
                                         <?= $content['deskripsi'] ?>
                                     </div>
                                     <p class="alamat text-center mt-3">
-                                        <strong>Nama UMKM:</strong>
+                                        <strong>Alamat:</strong>
                                         <?= $content['alamat_toko'] ?>
                                     </p>
                                     <p class="kontak text-center">

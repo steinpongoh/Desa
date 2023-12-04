@@ -10,6 +10,7 @@ if (isset($_POST['submit'])) {
         echo "
             <script>
             alert('Data Berhasil Ditambahkan');
+            document.location.href='../controllers/dataPenduduk.php'
             </script> 
         ";
     } else {

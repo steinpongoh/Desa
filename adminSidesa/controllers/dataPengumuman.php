@@ -38,21 +38,21 @@ $queryPengumuman = query('SELECT * FROM pengumuman');
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th>No</th>
                                     <th>Judul Pengumuman</th>
                                     <th>Detail Pengumuman</th>
                                     <th>Tanggal Pengumuman</th>
-                                    <th></th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tfoot>
-                                <tr>
+                                <tr class="text-center">
                                     <th>No</th>
                                     <th>Judul Pengumuman</th>
                                     <th>Detail Pengumuman</th>
                                     <th>Tanggal Pengumuman</th>
-                                    <th></th>
+                                    <th>Aksi</th>
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -65,26 +65,64 @@ $queryPengumuman = query('SELECT * FROM pengumuman');
                                         <td>
                                             <?php echo $rows['judul_pengumuman'] ?>
                                         </td>
-                                        <td>
-                                            <?php echo $rows['detail_pengumuman'] ?>
-                                        </td>
+                                        <?php
+                                        // Menampilkan hanya beberapa kata dari paragraf pertama
+                                        $deskripsiParagraf = explode(" ", $rows['detail_pengumuman']); // Membagi paragraf menjadi array kata-kata
+                                        $jumlahKataTampil = 10; // Ganti dengan jumlah kata yang ingin ditampilkan
+                                    
+                                        if (count($deskripsiParagraf) > $jumlahKataTampil) {
+                                            $deskripsiSingkat = implode(" ", array_slice($deskripsiParagraf, 0, $jumlahKataTampil)); // Mengambil sejumlah kata
+                                            echo '<div class="text-truncate"><td>' . $deskripsiSingkat . '...</td></div>';
+                                        } else {
+                                            echo '<div class="text-truncate"><td>' . $rows['deskripsi'] . '</td></div>';
+                                        }
+                                        ?>
                                         <td>
                                             <?php echo date('d M Y H:i', strtotime($rows['tanggal_pengumuman'])) ?>
                                         </td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center"
                                             style="display: flex;">
-                                            <a href="../models/hapusPengumuman.php?id=<?= $rows['id'] ?>">
-                                                <button type="button" class="btn btn-danger">
+                                            <a href="javascript:void(0);" data-toggle="modal"
+                                                data-target="#hapusModal<?= $rows['id'] ?>" data-id="<?= $rows['id'] ?>">
+                                                <button type="button" class="btn btn-danger m-1">
                                                     <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i
                                                             class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
-                                            <a href="../models/ubahPengumuman.php?id=<?= $rows['id'] ?>">
-                                                <button type="button" class="btn btn-warning ml-2">
-                                                    <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i
+                                            <a href="../models/ubahPengumuman.php?id=<?= $rows['id']; ?>">
+                                                <button type="button" class="btn btn-warning">
+                                                    <div class="sb-nav-link-icon mr-0 ml-1 mb-0 mt-0"><i
                                                             class="fa-solid fa-pen"></i></div>
                                                 </button>
                                             </a>
+                                            <div class="modal fade" id="hapusModal<?= $rows['id'] ?>" tabindex="-1"
+                                                role="dialog" aria-labelledby="hapusModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="hapusModalLabel">Konfirmasi Hapus
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Apakah Anda yakin ingin menghapus item ini?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Batal</button>
+                                                            <a href="../models/hapusEvent.php?id=<?= $rows['id']; ?>"
+                                                                class="text-decoration-none">
+                                                                <button type="button" class="btn btn-danger"
+                                                                    id="hapusButton">Hapus</button>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </td>
                                     </tr>
                                     <?php $i++ ?>
