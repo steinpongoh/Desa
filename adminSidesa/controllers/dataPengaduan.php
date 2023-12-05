@@ -115,10 +115,10 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                                             class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
-                                            <a href="../models/ubahPengaduan.php?id=<?= $rows['id']; ?>">
-                                                <button type="button" class="btn btn-warning">
-                                                    <div class="sb-nav-link-icon mr-0 ml-1 mb-0 mt-0"><i
-                                                            class="fa-solid fa-pen"></i></div>
+                                            <a href="../templates/balasan.php?id=<?= $rows['id']; ?>">
+                                                <button type="button" class="btn btn-success ml-2">
+                                                    <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i
+                                                            class="fa-solid fa-envelope"></i></div>
                                                 </button>
                                             </a>
                                             <div class="modal fade" id="hapusModal<?= $rows['id'] ?>" tabindex="-1"
