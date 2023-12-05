@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2023 at 08:23 AM
+-- Generation Time: Dec 05, 2023 at 09:05 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -174,7 +174,7 @@ INSERT INTO `penduduk` (`id`, `no_kk`, `nik`, `nama`, `tanggal_lahir`, `jenis_ke
 (9, 19, '90123456789012', 'Antonio Siwi', '1991-07-25', 'Pria', 'Kristen', 'Pengusaha', 'Jl. Agil No. 90, Tondangow'),
 (10, 20, '11223344556677', 'Lina Sari', '1989-03-30', 'Wanita', 'Kristen', 'Designer', 'Jl. Makmur No. 23, Tondangow'),
 (11, 21, '22334455667788', 'Mulyadi', '1993-10-12', 'Pria', 'Kristen', 'Petani', 'Jl. Rukun No. 45, Tondangow'),
-(12, 22, '33445566778899', 'Nia Tambuwun', '1984-08-12', 'Wanita', 'Kristen', 'Musisi', 'Jl. Harmoni No. 56, Tondangow'),
+(12, 22, '33445566778899', 'Stein Pongoh', '1984-08-12', 'Wanita', 'Kristen', 'Musisi', 'Jl. Harmoni No. 56, Tondangow'),
 (13, 23, '44556677889900', 'Opik Setiawan   ', '1996-01-02', 'Pria', 'Kristen', 'Fotografer', 'Jl. Serasi No. 67, Tondangow'),
 (14, 24, '55667788990011', 'Putri Amelia   ', '1983-05-08', 'Wanita', 'Hindu', 'Pelukis', 'Jl. Damai No. 78, Tondangow'),
 (15, 25, '66778899001122', 'Rudi Hermawan   ', '1990-09-29', 'Pria', 'Buddha', 'Insinyur', 'Jl. Jaya No. 34, Tondangow');
@@ -203,7 +203,7 @@ CREATE TABLE `pengaduan` (
 --
 
 INSERT INTO `pengaduan` (`id`, `nama_pengadu`, `alamat_lengkap`, `email`, `judul_pengaduan`, `detail_pengaduan`, `tanggal_pengaduan`, `no_telepon`, `gambar`, `status`) VALUES
-(0, 'Norman', 'Tataaran Patar', 'norman@gmail.com', 'Ketidakamanan di Taman Kota', '<p>Saya, sebagai salah satu warga setempat, ingin menyampaikan pengaduan mengenai keadaan yang mengkhawatirkan di Taman Kota yang terletak di wilayah kami. Keamanan masyarakat di taman tersebut semakin terancam, dan tindakan perlu segera diambil untuk mengatasi masalah ini.</p>', '2023-11-24 15:42:00', '088845667321', 'OIP.jfif', 2);
+(0, 'Antonio Siwi	', 'Jl. Agil No. 90, Tondangow', 'antoniosiwi@gmail.com', 'Pengaduan Terkait Kondisi Jalan Rusak di Lingkungan Kami', '<p>Saya, [Nama Anda], warga Jalan [Nama Jalan], RT [Nomor RT], RW [Nomor RW], Desa [Nama Desa], Kecamatan [Nama Kecamatan], Kabupaten [Nama Kabupaten], ingin menyampaikan pengaduan terkait kondisi jalan di lingkungan kami.</p>\r\n<p>Beberapa bulan terakhir, kami mengalami masalah serius terkait rusaknya infrastruktur jalan di sekitar wilayah kami. Jalan utama yang melintasi permukiman kami mengalami kerusakan yang cukup parah, dengan lubang dan retakan yang membahayakan pengguna jalan, terutama pada malam hari.</p>\r\n<p>Akibat kerusakan ini, mobil dan sepeda motor sering mengalami kerusakan, dan kami khawatir hal ini dapat menyebabkan kecelakaan. Selain itu, kondisi jalan yang buruk juga berdampak negatif pada estetika lingkungan kami dan menurunkan kenyamanan hidup warga.</p>', '2023-11-30 17:54:00', '089223445566', 'Jalan-Rusak.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -248,7 +248,9 @@ CREATE TABLE `penjual` (
 --
 
 INSERT INTO `penjual` (`id_penjual`, `nama_penjual`, `no_telepon`, `alamat_toko`, `link_alamat_toko`) VALUES
-(0, 9, '081234567890', 'Tondangow Shop', 'https://maps.app.goo.gl/JuFpKgdYy83jtX4w6');
+(1, 9, '08123456789', 'Jalan Merdeka Tondangow', 'https://maps.app.goo.gl/JuFpKgdYy83jtX4w6'),
+(2, 6, '089922441144', 'Jalan Sudirman Tondangow', 'https://maps.app.goo.gl/H4GtQss59R35GSaL8'),
+(3, 12, '08987654321', 'Jalan Gatot Subroto No. 789 Tondangow', 'https://maps.app.goo.gl/UPFHtHrCcwePwi7EA');
 
 -- --------------------------------------------------------
 
@@ -270,12 +272,9 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `id_penjual`, `nama_produk`, `harga`, `gambar`, `deskripsi`) VALUES
-(0, 0, 'Tas Anyaman', '50. 000', 'download.jfif', '<p style=\"text-align: center;\">Tas anyaman tangan yang dibuat dengan keterampilan anyaman tradisional.</p>'),
-(3, 3, 'Gado Gado', '20,000', 'Screenshot 2023-09-07 115824.png', '0'),
-(4, 5, 'Ramen', '20,000', 'Screenshot 2023-09-19 154759.png', '0'),
-(6, 5, 'Sayor Paku', '15,000', 'dff94199afafbae08e92a51261c6f4bf.jpeg', '0'),
-(8, 3, 'Pisang stik', '5,000', 'test.png', '0'),
-(9, 3, 'Pizza', '40,000', 'value-nsf-february-a-national-pizza-day-large-take-and-bake-pizza-22x28-no-copy-0.jpg', 'Pizza adalah roti berbentuk bulat pipih dengan diameter 30 cm yang dipanggang dalam oven dan biasanya disiram saus tomat serta keju dan dengan makanan tambahan lainnya (topping) yang sesuai selera penikmatnya.');
+(11, 2, 'Kerajinan Tangan \"Batik Harmoni\"', '100.000', 'batik-kerajinan-khas-semarang.jpg', '<p>Batik Harmoni adalah karya seni batik handmade dengan motif modern yang unik, terbuat dari kain katun berkualitas tinggi. Setiap potongan memiliki warna-warna yang harmonis dan bermotif geometris modern, membuatnya cocok sebagai hiasan dinding atau sya'),
+(12, 1, 'Makanan Ringan \"Gurih Lezat\"', '30.000', '528_840x576-600x411.jpg', '<p>Gurih Lezat membawa Anda sensasi kelezatan dengan keripik singkong pedas yang renyah. Dibuat dari singkong pilihan tanpa pengawet dan MSG, produk ini cocok untuk dinikmati sebagai camilan sehat dan lezat. Kelezatan rasa pedas gurihnya pasti akan memuas'),
+(13, 3, 'Sambal Mantap \"Rasa Pedas Pas\"', '40.000', 'a2d9efc8c3b1fe885be34c00799d5ad7.jpg', '<p>Sambal Mantap \"Rasa Pedas Pas\" adalah saus sambal tradisional dengan rasa pedas yang menggoda selera. Terbuat dari campuran cabai pilihan dan bumbu-bumbu alami, sambal ini memberikan kepedasan yang pas dan sensasi rasa yang memukau. Cocok untuk menyemp');
 
 -- --------------------------------------------------------
 
@@ -379,7 +378,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `danadesa`
@@ -391,13 +390,13 @@ ALTER TABLE `danadesa`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `keluarga`
@@ -418,10 +417,22 @@ ALTER TABLE `pengumuman`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `penjual`
+--
+ALTER TABLE `penjual`
+  MODIFY `id_penjual` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
