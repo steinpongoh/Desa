@@ -10,11 +10,15 @@ $queryDanadesa = query('SELECT * FROM danadesa');
 <div id="layoutSidenav_content">
     <div class="container-fluid">
         <main>
-            <h1 class="mt-4"><?= $pageName ?></h1>
+            <h1 class="mt-4">
+                <?= $pageName ?>
+            </h1>
             <ol class="breadcrumb mb-4">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item active"><?= $pageName ?></li>
+                    <li class="breadcrumb-item active">
+                        <?= $pageName ?>
+                    </li>
                 </ol>
             </ol>
             <div class="card mb-4">
@@ -34,7 +38,7 @@ $queryDanadesa = query('SELECT * FROM danadesa');
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th>No</th>
                                     <th>Informasi</th>
                                     <th>Detail</th>
@@ -42,29 +46,38 @@ $queryDanadesa = query('SELECT * FROM danadesa');
                                 </tr>
                             </thead>
                             <tfoot>
-                                <<tr>
+                                <tr class="text-center">
                                     <th>No</th>
                                     <th>Informasi</th>
                                     <th>Detail</th>
                                     <th></th>
-                                    </tr>
+                                </tr>
                             </tfoot>
                             <tbody>
                                 <?php $i = 1 ?>
                                 <?php foreach ($queryDanadesa as $rows) { ?>
                                     <tr>
-                                        <td><?= $i ?></td>
-                                        <td><?php echo $rows['informasi'] ?></td>
-                                        <td><?php echo $rows['detail'] ?></td>
-                                        <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
+                                        <td>
+                                            <?= $i ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $rows['informasi'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $rows['detail'] ?>
+                                        </td>
+                                        <td class="flex-row pr-2 align-items-center justify-content-center"
+                                            style="display: flex;">
                                             <a href="../models/hapusDanadesa.php?id=<?= $rows['id'] ?>">
                                                 <button type="button" class="btn btn-danger">
-                                                    <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i class="fa-solid fa-trash"></i></div>
+                                                    <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i
+                                                            class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
                                             <a href="../models/ubahDanadesa.php?id=<?= $rows['id'] ?>">
                                                 <button type="button" class="btn btn-warning ml-2">
-                                                    <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i class="fa-solid fa-pen"></i></div>
+                                                    <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i
+                                                            class="fa-solid fa-pen"></i></div>
                                                 </button>
                                             </a>
                                         </td>

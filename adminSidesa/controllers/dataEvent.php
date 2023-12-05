@@ -38,7 +38,7 @@ $queryPengaduan = query('SELECT * FROM `event`');
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th>No</th>
                                     <th>Judul Acara</th>
                                     <th>Detail Acara</th>
@@ -49,7 +49,7 @@ $queryPengaduan = query('SELECT * FROM `event`');
                                 </tr>
                             </thead>
                             <tfoot>
-                                <tr>
+                                <tr class="text-center">
                                     <th>No</th>
                                     <th>Judul Acara</th>
                                     <th>Detail Acara</th>

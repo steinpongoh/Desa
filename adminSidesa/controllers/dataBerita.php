@@ -69,9 +69,18 @@ $queryBerita = query('SELECT * FROM berita');
                                         <td>
                                             <?php echo date('d M Y', strtotime($rows['tanggal_berita'])) ?>
                                         </td>
-                                        <td style="color:grey;">
-                                            <?php echo substr($rows['detail_berita'], 0, 15) ?>
-                                        </td>
+                                        <?php
+                                        // Menampilkan hanya beberapa kata dari paragraf pertama
+                                        $deskripsiParagraf = explode(" ", $rows['detail_berita']); // Membagi paragraf menjadi array kata-kata
+                                        $jumlahKataTampil = 10; // Ganti dengan jumlah kata yang ingin ditampilkan
+                                    
+                                        if (count($deskripsiParagraf) > $jumlahKataTampil) {
+                                            $deskripsiSingkat = implode(" ", array_slice($deskripsiParagraf, 0, $jumlahKataTampil)); // Mengambil sejumlah kata
+                                            echo '<div class="text-truncate"><td>' . $deskripsiSingkat . '...</td></div>';
+                                        } else {
+                                            echo '<div class="text-truncate"><td>' . $rows['deskripsi'] . '</td></div>';
+                                        }
+                                        ?>
                                         <td>
                                             <img width="60px" height="60px"
                                                 src="../../img/berita/<?php echo $rows['gambar'] ?>" alt="">

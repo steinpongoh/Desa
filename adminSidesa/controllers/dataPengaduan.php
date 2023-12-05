@@ -100,7 +100,7 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                         </td>
                                         <td>
                                             <?php if ($rows['status'] == '1') { ?>
-                                                <div class="badge bg-success">Pengaduan telah ditinjau</div>
+                                                <div class="badge bg-success text-white">Pengaduan telah ditinjau</div>
                                             <?php } ?>
                                             <?php if ($rows['status'] == '2') { ?>
                                                 <div class="badge bg-danger">Pengaduan tidak Valid</div>
